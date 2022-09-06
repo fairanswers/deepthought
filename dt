@@ -1,0 +1,1 @@
+java -jar target/deepthought-1.0-jar-with-dependencies.jar $@
