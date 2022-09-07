@@ -1,0 +1,1 @@
+java -cp target/deepthought-1.0-jar-with-dependencies.jar com.fairanswers.deepthought.DeepThoughtShell

@@ -27,18 +27,18 @@ public abstract class Task {
         StringBuffer sb = new StringBuffer();
         sb.append(this.getClass());
         sb.append("\n");
-        sb.append("Usage: ");
-        sb.append(getUsage());
-        sb.append("\n");
         sb.append("Names: ");
         sb.append(getNames());
         sb.append("\n");
+        sb.append("Usage: ");
+        sb.append(getUsage());
+        sb.append("\n");
         return sb.toString();
     }
-    public static Optional<Task> findByName(String input, List<Task> jeltzes) { //TODO make this pretty
-        for(int i=0; i< jeltzes.size(); i++){
-            if(jeltzes.get(i).getNames().contains(input)){
-                return Optional.of(jeltzes.get(i));
+    public static Optional<Task> findByName(String input, List<Task> tasks) { //TODO make this pretty
+        for(int i=0; i< tasks.size(); i++){
+            if(tasks.get(i).getNames().contains(input)){
+                return Optional.of(tasks.get(i));
             }
         }
         return Optional.empty();

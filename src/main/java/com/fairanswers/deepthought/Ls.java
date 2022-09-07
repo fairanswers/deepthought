@@ -11,12 +11,13 @@ public class Ls extends Task {
     @Override
     public String getUsage() {return "ls <path>";}
     @Override
-    public List<String> getNames(){ return Arrays.asList("ls");}
+    public List<String> getNames(){ return NAMES;}
 
 
 
     public String doit(List<String> args) {
         System.out.println( "Inside Ls with args "+ String.join(",", args) );
+        // Remove 'ls' or 'list'command from args
         args = filterFirst(args);
         ArrayList<String> newArgs = new ArrayList<>();
         newArgs.add("/usr/bin/ls");
