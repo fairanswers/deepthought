@@ -18,10 +18,12 @@ public class Get extends Task{
     @Override
     public String doit(List<String> args) {
         String resp;
+        if(args.size() < 2){
+            System.out.println(getUsage());
+        }
         HttpSupportClass hc = new HttpSupportClass();
-        System.out.println(args.toString());
         try {
-            String url = args.get(0);
+            String url = args.get(1);
             System.out.println("getting "+url);
             resp = hc.get(url);
         } catch (Exception e) {

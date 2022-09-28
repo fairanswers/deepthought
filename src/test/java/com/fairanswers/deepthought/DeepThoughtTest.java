@@ -21,7 +21,7 @@ public class DeepThoughtTest
     @Test
     public void testHttp(){
         Get get = new Get();
-        System.out.println(get.doit(Arrays.asList("https://httpbin.org/get")) );
+        System.out.println(get.doit(Arrays.asList("get", "https://httpbin.org/get")) );
     }
 
     @Test
