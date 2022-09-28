@@ -19,8 +19,11 @@ public class Get extends Task{
     public String doit(List<String> args) {
         String resp;
         HttpSupportClass hc = new HttpSupportClass();
+        System.out.println(args.toString());
         try {
-            resp = hc.get(args.get(0));
+            String url = args.get(0);
+            System.out.println("getting "+url);
+            resp = hc.get(url);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

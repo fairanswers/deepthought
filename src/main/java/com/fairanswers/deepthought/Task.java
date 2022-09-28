@@ -17,6 +17,15 @@ public abstract class Task {
     private String USAGE = "Override Me";
     private List<String> NAMES = Arrays.asList("parentName");
 
+    public static String getAllUseages() {
+        StringBuffer sb = new StringBuffer();
+        List<Task> tasks = getTasks();
+        tasks.stream().forEach( tsk -> {
+            sb.append(  tsk.getUsage());
+            sb.append("\n"); });
+        return sb.toString();
+    }
+
     public abstract String getUsage();
 
     public abstract List<String>getNames();
